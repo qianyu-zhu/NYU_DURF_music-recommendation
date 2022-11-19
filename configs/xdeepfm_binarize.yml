@@ -1,0 +1,16 @@
+---
+experiment_name: 'xdeepfm_binarize'
+
+binarize: true
+
+train_csv: 'musicRatings.csv'
+
+train_config:
+  max_epochs: 20
+
+model_type: xDeepFM
+model_config:
+  factor_num: 1024
+  mlp_dims: [200, 200, 200]
+  dropout: 0.5
+  cross_layer_sizes: [100, 100, 100]

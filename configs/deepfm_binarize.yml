@@ -1,0 +1,13 @@
+---
+experiment_name: 'deepfm_binarize'
+
+binarize: true
+
+train_config:
+  max_epochs: 20
+
+model_type: DeepFM
+model_config:
+  factor_num: 1024
+  mlp_dims: [200, 200, 200]
+  dropout: 0.6

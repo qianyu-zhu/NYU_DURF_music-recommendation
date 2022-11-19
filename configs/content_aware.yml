@@ -1,0 +1,20 @@
+---
+experiment_name: 'content_aware'
+
+binarize: true
+
+train_csv: train_triplets.txt
+data_config:
+  dataset:
+    neg_sample: 2
+  dataloader:
+    batch_size: 2
+
+train_config:
+  max_epochs: 20
+
+
+model_type: ContentAware
+model_config:
+  factor_num: 1024
+  feature_dim: 12

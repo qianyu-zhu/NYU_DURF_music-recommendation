@@ -1,0 +1,27 @@
+---
+experiment_name: 'dense_deepfm'
+
+binarize: false
+
+train_csv: 'musicRatings.csv'
+
+train_config:
+  max_epochs: 20
+
+data_config:
+  dataset:
+    neg_sample: 2
+  dataloader:
+    batch_size: 2
+
+inference:
+  active: 0
+  ckpt_file: save/dense_deepfm/model_dense_deepfm_DeepFM_epoch_19_loss_6.379105091094971.bin
+  inference_result_save_path: results/dense_deepfm_result.csv
+
+
+model_type: DeepFM
+model_config:
+  factor_num: 512
+  mlp_dims: [200, 200, 200]
+  dropout: 0.5

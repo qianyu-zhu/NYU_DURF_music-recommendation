@@ -1,0 +1,39 @@
+---
+experiment_name: 'ffm_binarize'
+
+binarize: true
+
+train_csv: train_triplets.txt
+data_config:
+  dataset:
+    neg_sample: 2
+  dataloader:
+    batch_size: 3000
+
+train_config:
+  max_epochs: 20
+
+model_type: xDeepFM
+model_config:
+  factor_num: 1024
+  mlp_dims: [200, 200, 200]
+  dropout: 0.5
+  cross_layer_sizes: [100, 100, 100]
+# best auc: 0.9018
+
+# model_type: NCF
+# model_config:
+#   factor_num: 8
+#   num_layers: 2
+#   dropout: 0.1
+#   model: MLP
+  # Best auc: 0.9161
+
+# model_type: DeepFM
+# model_config:
+#   factor_num: 1024
+#   mlp_dims: [200, 200, 200]
+#   dropout: 0.6
+
+# Best auc: 0.8939
+

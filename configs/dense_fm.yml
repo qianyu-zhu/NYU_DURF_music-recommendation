@@ -1,0 +1,23 @@
+---
+experiment_name: 'dense_fm'
+
+binarize: false
+
+train_csv: 'musicRatings.csv'
+
+train_config:
+  max_epochs: 20
+
+data_config:
+  dataset:
+    neg_sample: 2
+  dataloader:
+    batch_size: 2
+
+
+model_type: FM
+model_config:
+  factor_num: 512
+  # mlp_dims: [200, 200, 200]
+  # dropout: 0.5
+  # cross_layer_sizes: [100, 100, 100]
